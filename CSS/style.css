@@ -38,7 +38,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Gentium Book Basic", "Helvetica Neue", sans-serif;
+  font-family: "Gentium Book Basic", "Helvetica Neue", sans-serif;
   font-size: 1.1em;
   color: #453C35;
 }
@@ -50,7 +50,7 @@ section p {
 
 li {  
   font-size: 1em;
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 section a {
@@ -70,7 +70,6 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 4em 0;
- 
 }
 
 footer li {
@@ -86,7 +85,7 @@ footer li a {
 }
 
 footer li a:hover {
-color: #ffffff;
+  color: #ffffff;
 }
 
 .photo-credit {
