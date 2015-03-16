@@ -1,54 +1,3 @@
-/* Reset stylesheet:
-http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/*End reset stylesheet*/
-
 /*Box-sizing*/
 html {
 	box-sizing: border-box;
@@ -58,11 +7,12 @@ html {
 	box-sizing: inherit;
 }
 
-/*Navigation section*/
+/*Navigation*/
 
 .navigation {
 	background-color: #fff;
 	position: fixed;
+	z-index: 1;
 	width: 100%;
 	border-bottom: solid 1px #e0dbd9;
 }
@@ -167,16 +117,21 @@ html {
 
 /*Skills*/
 
-.skills {
-	background-color: rgba(235, 249, 34, 0.8);
-	font-family: 'Roboto', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	color: #fff;
-	text-align: center;
-	padding-top: 3rem;
+section {
+	padding-top: 2rem;
 	padding-left: 2rem;
 	padding-right: 2rem;
 	padding-bottom: 4rem;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.skills {
+	background-color: rgba(235, 249, 34, 0.8);
+	color: #fff;
+	text-align: center;
+	padding-top: 1.5rem;
+	padding-bottom: 3rem;
 }
 
 .skills h2 {
@@ -188,14 +143,17 @@ html {
 .skills-list li {
 	display: inline-block;
 	vertical-align: top;
-	padding: 2rem 3rem;
+	padding: 1rem 2rem;
 	width: 33%;
 }
 
+h3 {
+	font-size: 1.5rem;
+	margin-top: 1.1rem;
+	margin-bottom: 0.7em;
+}
+
 .skill-caption h3 {
-	font-size: 1.6rem;
-	margin-top: 1rem;
-	margin-bottom: 0.5em;
 	color: #35342d;
 }
 
@@ -211,11 +169,11 @@ html {
 
 .featured-work {
 	width: 65%;
+	min-width: 700px;
 	margin: 2em auto;
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	color: #35342d;
-	font-size: 1.6rem;
 }
 
 .featured-work-list {
@@ -225,28 +183,48 @@ html {
 }
 
 .featured-work-list li {
-	max-width: 35%;
+	max-width: 40%;
+	min-width: 230px;
 	display: inline-block;
+	border: 1px solid #e0dbd9;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
-#work1-1 {
+
+.work-item-left {
 	float: left;
+	margin-right: 2em;
 }
 
-#work1-2 {
+.work-item-right {
 	float: right;
+	margin-left: 2em;
+}
+
+/*About-me*/
+
+.about-me {
+	clear: both;
+	width: 65%;
+	margin: 4em auto;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	line-height: 2em;
 }
 
 /*Contact*/
 
 .contact {
 	clear: both;
-	padding: 4em;
+	width: 65%;
+	margin: 4em auto;
+	line-height: 2em;
 }
 
 /*footer*/
 
-.footer {
+div.footer {
 	clear: both;
 	max-width: 810px;
 	margin: 0 auto;
