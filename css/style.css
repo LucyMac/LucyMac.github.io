@@ -51,18 +51,18 @@ html {
 }
 
 .nav-options li a {
-	color: #878080;
+	color: #878080; /*dark grey*/
 	text-decoration: none;
 }
 
 .nav-options li a:hover {
-	color: #fce72d;
+	color: #fce72d; /*yellow*/
 	text-decoration: none;
 }
 
 #active a {
 	font-weight: 500;
-	color: rgba(235, 249, 34, 1);
+	color: rgba(235, 249, 34, 1);  /*Lime green*/
 }
 
 /*Header*/
@@ -75,7 +75,7 @@ html {
 	height: 45.938rem;
 	font-family: 'Roboto', sans-serif;
 	-webkit-font-smoothing: antialiased;
-	color: #ffffff;
+	color: #fff;
 	padding: 14em 0;
 	text-align: center;
 }
@@ -85,7 +85,7 @@ html {
 	font-weight: lighter;
 	line-height: 70px;
 	margin-top: 1em;
-	text-shadow: 1px 1px #def940;
+	text-shadow: 1px 1px #ebf922;
 }
 
 .masthead-heading {
@@ -101,17 +101,18 @@ html {
 	width: 9em;
 	background-color: transparent;
 	border: 2px solid #fff;
+	border-radius: 5px;
 	color: #fff;
 	font-size: 1.1em;
 }
 
 .masthead-button a {
 	text-decoration: none;
-	color: #ffffff;
+	color: #fff;
 }
 
 .masthead-button:hover {
-	background-color: rgba(235, 249, 34, 1);
+	background-color: rgba(235, 249, 34, 1);  /*Lime green*/
 }
 
 
@@ -127,7 +128,7 @@ section {
 }
 
 .skills {
-	background-color: rgba(235, 249, 34, 0.8);
+	background-color: #EBF922;
 	color: #fff;
 	text-align: center;
 	padding-top: 1.5rem;
@@ -135,16 +136,25 @@ section {
 }
 
 .skills h2 {
-	font-size: 2.8rem;
+	font-size: 2.9rem;
 	font-weight: lighter;
 	padding: 1em;
+}
+
+ul.skills-list {
+	width: 840px;
+	margin: 0 auto;
 }
 
 .skills-list li {
 	display: inline-block;
 	vertical-align: top;
-	padding: 1rem 2rem;
+	padding: 20px 20px 20px 0px;
 	width: 33%;
+}
+
+.skills-list li:last-child {
+	padding-right: 0px;
 }
 
 h3 {
@@ -162,7 +172,7 @@ h3 {
 	line-height: 1.4em;
 	margin-top: 1rem;
 	margin-bottom: 0.5em;
-	color: #35342d;
+	color: #514f44;
 }
 
 /*featured work*/
@@ -213,13 +223,20 @@ h3 {
 	line-height: 2em;
 }
 
+.about-me p {
+        margin: 10px auto;
+}
+
 /*Contact*/
 
-.contact {
+#contact {
 	clear: both;
-	width: 65%;
-	margin: 4em auto;
 	line-height: 2em;
+	font-weight: 500;
+}
+
+b {
+	font-weight: 400;
 }
 
 /*footer*/
@@ -239,9 +256,6 @@ div.footer {
 .social li {
 	display: inline-block;
 	margin: 1rem 0.5rem;
-	border: solid 1px #e0dbd9;
-	border-radius: 100%;
-	padding: 0.6rem;
 }
 
 .trademark {
