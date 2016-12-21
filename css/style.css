@@ -1,3 +1,13 @@
+/*variables*/
+:root {
+	--darkGrey: #35342d;
+	--limeGreen: rgba(247, 238, 36, 1);
+	--limeGreenBackground: rgba(247, 238, 36, 0.7);
+	--lineBreak: #e0dbd9;
+}
+
+/*General styles*/
+
 body {
 	font-family: 'Open Sans', sans-serif; 
 	line-height: 1.4;
@@ -22,14 +32,14 @@ ul {
 	position: fixed;
 	width: 100%;
 	z-index: 1;
-	border-bottom: solid 1px #e0dbd9;
+	border-bottom: solid 1px var(--lineBreak);
 }
 
 /*Title*/
 #my-name {
 	font-family: 'Raleway', sans-serif;
 	font-size: 25px;
-	color: rgba(247, 238, 36, 0.7);
+	color: var(--limeGreen);
 	padding-top: 15px;
 	padding-bottom: 15px;
 	margin: 0;
@@ -77,7 +87,7 @@ ul {
 .masthead-heading {
 	font-size: 30px;
 	line-height: 1.2;
-	text-shadow: 1px 1px rgba(247, 238, 36, 1);
+	text-shadow: 1px 1px var(--limeGreen);
 	font-family: 'Raleway', sans-serif;
 	margin-top: 30px;
 	margin-bottom: 10px;
@@ -103,17 +113,17 @@ ul {
     padding: 8px 12px;
     margin-top: 30px;
     /*text-shadow: 1px 1px #ebf922;*/
-    box-shadow: 2px 2px rgba(247, 238, 36, 1);
+    box-shadow: 2px 2px var(--limeGreen);
 }
 .masthead-button:hover {
-	background-color: rgba(247, 238, 36, 1);  /*Lime green*/
+	background-color: var(--limeGreen); /*Lime green*/
 	color: #fff;
 }
 
 /*process - GREEN SECTION*/
 
 .process {
-	background-color: rgba(247, 238, 36, 0.7);
+	background-color: var(--limeGreenBackground);
 	color: #fff;
 	/*text-align: center;*/
 	padding-top: 15px;
@@ -137,19 +147,14 @@ h3 {
 	font-size: 18px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	/*color: rgba(247, 238, 36, 0.7);*/
-	color: #35342d;
+	color: var(--darkGrey);
 }
-
-/*.process-caption h3 {
-	color: #35342d;
-}*/
 
 p {
 	font-size: 15px;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	color: #514f44;
+	color: var(--darkGrey);
 }
 
 p.large {
@@ -169,7 +174,9 @@ p.large {
 .featured-work h3,
 .about-me h3 {           
 	margin-top: 30px;
-	text-transform: uppercase;
+	padding-bottom: 3px;
+	display: inline-block;
+    border-bottom: solid 2px var(--limeGreenBackground);
 }
 
 .featured-work-list {      /*ul*/
@@ -206,12 +213,12 @@ p.large {
 }
 
 .work-item p {
-	color: rgba(247, 238, 36, 1);
+	color: var(--limeGreen);
 	text-align: center;
 }
 
 #contact span {
-	color: rgba(247, 238, 36, 0.7);
+	color: var(--limeGreen);
 }
 
 b {
@@ -219,11 +226,11 @@ b {
 }
 
 .highlight {
-	border: 2px solid rgba(247, 238, 36, 0.7);
+	border: 2px solid var(--limeGreenBackground);
 	border-radius: 3px;
 	padding: 10px 25px;
 	margin-top: 40px;
-	box-shadow: 2px 2px rgba(247, 238, 36, 0.7);
+	box-shadow: 2px 2px var(--limeGreenBackground);
 }
 
 /*footer*/
@@ -233,11 +240,9 @@ div.footer {
 	max-width: 400px;
 	margin: 0 auto;
 	margin-top: 70px;
-	/*-webkit-font-smoothing: antialiased;*/
-	color: #333333;
 	text-align: center;
 	padding: 30px 20px;
-	border-top: solid 1px #e0dbd9;
+	border-top: solid 1px var(--lineBreak);
 }
 
 .social {
