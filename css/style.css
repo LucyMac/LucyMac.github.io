@@ -33,6 +33,7 @@ ul {
 	width: 100%;
 	z-index: 1;
 	border-bottom: solid 1px var(--lineBreak);
+	top: 0;
 }
 
 /*Title*/
@@ -58,33 +59,6 @@ ul {
     color: #fff;
     padding-top: 50px;
     padding-bottom: 70px;
-}
-
-@media screen and (max-width: 768px) { 
-	.masthead {
-		padding-top: 20px;
-    	padding-bottom: 50px;
-	}
-	.masthead-heading {
-		margin-top: 65px;
-	}
-}
-
-@media screen and (min-width: 768px) { 
-	.masthead {
-		padding-top: 90px;
-    	padding-bottom: 90px;
-		max-height: 400px;
-	}
-	.masthead h1 {
-		font-size: 47px;
-	}
-	.masthead h2 {
-		font-size: 25px;
-	}
-	.masthead-button {
-		font-size: 19px;
-	}
 }
 
 .masthead-heading {
@@ -121,6 +95,41 @@ ul {
 	color: #fff;
 }
 
+/*  Masthead media queries */
+
+@media screen and (max-width: 768px) { 
+	.masthead {
+		padding-top: 20px;
+    padding-bottom: 50px;
+	}
+	.masthead-heading {
+		margin-top: 65px;
+	}
+}
+
+@media screen and (max-width: 580px) { 
+	.masthead {
+		padding-top: 0;
+	}
+}
+
+@media screen and (min-width: 768px) { 
+	.masthead {
+		padding-top: 90px;
+    padding-bottom: 90px;
+		max-height: 400px;
+	}
+	.masthead h1 {
+		font-size: 47px;
+	}
+	.masthead h2 {
+		font-size: 25px;
+	}
+	.masthead-button {
+		font-size: 19px;
+	}
+}
+
 /*Skills - GREEN SECTION*/
 
 .process {
@@ -137,11 +146,20 @@ ul {
 ul.process-list {
 	padding-left: 0;
 	margin-top: 30px;
-    margin-bottom: 20px;
+	margin-bottom: 20px;
+	display: flex;
 }
 
 .process-list li {
 	padding-bottom: 20px;
+}
+
+@media screen and (max-width: 580px) {
+	ul.process-list {
+		flex-direction: column;
+		margin-top: 10px;
+    margin-bottom: 0px;
+	}
 }
 
 h3 {
@@ -149,6 +167,7 @@ h3 {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	color: var(--darkGrey);
+	height: 28px;
 }
 
 p {
@@ -171,14 +190,12 @@ p.large {
 
 /*featured work*/
 
-@media screen and (min-width: 768px) { 
-	.featured-work {
-		margin-bottom: 30px;
-	}
+.featured-work {
+	margin-top: 10px;
 }
 
 .featured-work h3,
-.about-me h3 {           
+.about-me h3 {
 	margin-top: 30px;
 	padding-bottom: 3px;
 	display: inline-block;
@@ -187,20 +204,29 @@ p.large {
 
 .featured-work-list {      /*ul*/
 	max-width: 100%;
-	margin: 0 auto 50px auto;
+	margin: 0 -15px  0 -15px;
 	padding-left: 0;
+}
+
+
+@media screen and (min-width: 768px) { 
+	.featured-work {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.featured-work-list {
+		
+	}
 }
 
 .work-item {
 	margin-top: 15px;
 	margin-bottom: 40px;
-	/*padding-left: 0;*/
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) and (max-width: 1100px) { 
 	.work-item {
-		height: 220px;
-		padding-right: 70px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -231,6 +257,60 @@ b {
 	font-weight: 600;
 }
 
+@media screen and (max-width: 480px) { 
+	.details-wrapper {
+		width: 100%;
+	}
+}
+
+.circular-img {
+	background-image: url('../images/Lucy_headshot.jpg');
+	height: 140px;
+	width: 140px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 70% 100%;
+	border-radius: 100%;
+	margin-top: 20px;
+	/* margin-left: 10px; */
+}
+
+
+@media screen and (max-width: 767px) { 
+	.circular-img {
+		height: 100px;
+		width: 100px;
+	}
+}
+
+.circular-img-wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+@media screen and (min-width: 768px) { 
+	.circular-img-wrapper {
+		justify-content: flex-end;
+	}
+}
+
+@media screen and (max-width: 580px) { 
+	.circular-img-wrapper {
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (max-width: 480px) { 
+	.circular-img-wrapper {
+		display: none;
+	}
+}
+
+.box-wrapper {
+	display: flex;
+  justify-content: center;
+}
+
 .box {
 	border: 2px solid var(--limeGreenBackground);
 	border-radius: 3px;
@@ -240,10 +320,13 @@ b {
 	display: inline-block;
 }
 
+
+
 /*footer*/
 
 .footer {
-	clear: both;
+	display: flex;
+	flex-direction: column;
 	max-width: 400px;
 	margin: 0 auto;
 	margin-top: 70px;
@@ -289,49 +372,50 @@ b {
 }
 
 .soc {
-    overflow: hidden;
-    margin: 0; 
+	overflow: hidden;
+	margin: 0; 
 	padding: 0;
-    list-style: none;
+	list-style: none;
+	display: flex;
+	justify-content: center;
 }
 
 .soc li {
-    display: inline-block;
-    *display :inline;
-    zoom: 1;
+	display: inline-block;
+	zoom: 1;
 }
 
 .soc li a {
-    font-family: si!important;
-    font-style: normal;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    position: relative;
-    z-index: 1;
+	font-family: si!important;
+	font-style: normal;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	position: relative;
+	z-index: 1;
 	width: 53px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 26px;
-    color: var(--limeGreen);
-    background-color: #ffffff;
+	height: 40px;
+	line-height: 40px;
+	font-size: 26px;
+	color: var(--limeGreen);
+	background-color: #ffffff;
 }
 
 .soc-github:before {
-    content:'\e030';
+  content:'\e030';
 }
 .soc-twitter:before {
-    content:'\e040';
+  content:'\e040';
 }
 .soc-linkedin:before {
-    content:'\e049';
+  content:'\e049';
 }
