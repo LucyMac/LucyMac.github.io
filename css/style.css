@@ -408,6 +408,7 @@ main {
 
 .blue {
   color: var(--darker-blue);
+  padding: 0 10px;
 }
 
 .contact-item {
