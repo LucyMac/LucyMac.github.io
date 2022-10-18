@@ -9,7 +9,8 @@
   /* --peach: rgba(254, 147, 140, 0.8); */
   --peach: #fe938c;
   --sand: #e6b89c;
-  --teal-green: rgba(68, 172, 161, 0.6);
+  /* --teal-green: rgba(68, 172, 161, 0.6); */
+  --teal-green: #b4ded9;
 
   --mobile-large: 576px;
   --tablet: 768px;
@@ -52,18 +53,15 @@ strong {
 }
 
 h1,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
 }
 
 h2 {
   font-weight: 700;
-}
-
-h4,
-h5,
-h6 {
-  font-weight: 400;
 }
 
 p {
@@ -92,11 +90,9 @@ p.small {
   p {
     font-size: 18px;
   }
-
   p.small {
     font-size: 14px;
   }
-
   .container {
     max-width: 708px;
     padding-left: 30px;
@@ -113,10 +109,6 @@ p.small {
     padding-left: 40px;
     padding-right: 40px;
   }
-}
-
-a {
-  color: var(--darker-blue);
 }
 
 a:hover,
@@ -140,7 +132,7 @@ ul {
 }
 
 .section-heading {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 40px;
   position: absolute;
   z-index: 1;
@@ -148,18 +140,17 @@ ul {
   top: 0;
   transform: translateY(-65%);
 }
-
 .section-heading .final-word {
   position: relative;
 }
 .section-heading .final-word::after {
   position: absolute;
   left: 0;
-  width: calc(100% + 70px);
-  height: 60px;
+  width: calc(100% + 50px);
+  height: 30px;
   content: "";
   background-color: var(--darker-blue);
-  bottom: -5px;
+  bottom: -9px;
   z-index: -1;
 }
 
@@ -169,8 +160,13 @@ ul {
   }
 
   .section-heading {
-    font-size: 70px;
+    font-size: 60px;
     margin-bottom: 60px;
+  }
+  .section-heading .final-word::after {
+    width: calc(100% + 60px);
+    height: 40px;
+    bottom: -5px;
   }
 }
 
@@ -180,8 +176,12 @@ ul {
   }
 
   .section-heading {
-    font-size: 96px;
+    font-size: 75px;
     margin-bottom: 60px;
+  }
+  .section-heading .final-word::after {
+    width: calc(100% + 70px);
+    height: 50px;
   }
 }
 
@@ -191,7 +191,7 @@ ul {
   }
 
   .section-heading {
-    font-size: 96px;
+    font-size: 86px;
     margin-bottom: 60px;
   }
 }
@@ -202,9 +202,7 @@ ul {
 
 .header {
   background-color: var(--soft-paper);
-  height: 500px;
-  /* position: fixed; */
-  /* top: 0; */
+  height: auto;
   z-index: 1;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -221,29 +219,62 @@ ul {
 }
 
 .header__title {
-  font-size: 90px;
+  font-size: 60px;
   color: var(--sand);
-  padding-bottom: 150px;
+  padding-bottom: 50px;
   margin: 0;
 }
 
 .header__subtitle {
-  font-size: 40px;
+  font-size: 30px;
   color: var(--smokey-blue);
   margin: 0;
   text-align: right;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .header {
+    min-height: 300px;
     padding-top: 70px;
     padding-bottom: 90px;
   }
   .header__title {
-    font-size: 130px;
+    font-size: 70px;
+    padding-bottom: 100px;
   }
   .header__subtitle {
-    font-size: 44px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 450px;
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+  .header__title {
+    font-size: 80px;
+    padding-bottom: 100px;
+  }
+  .header__subtitle {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    height: 500px;
+    padding-top: 70px;
+    padding-bottom: 90px;
+  }
+
+  .header__title {
+    font-size: 100px;
+    padding-bottom: 150px;
+  }
+  .header__subtitle {
+    font-size: 40px;
   }
 }
 
@@ -265,8 +296,9 @@ ul {
 
 .triangle {
   position: absolute;
-  top: -30%;
-  width: 40%;
+  top: -30px;
+  width: 80%;
+  max-width: 620px;
 }
 
 .triangle img {
@@ -275,9 +307,9 @@ ul {
 .triangle p {
   color: var(--white);
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 35%;
-  width: 50%;
+  width: 45%;
 }
 
 .white-block {
@@ -289,7 +321,7 @@ ul {
 .white-block::before {
   content: "";
   background-color: var(--darker-blue);
-  height: 50px;
+  height: 40px;
   width: 60%;
   position: absolute;
   top: 0;
@@ -297,25 +329,111 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-.content {
+.intro__content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   color: var(--charcoal);
-  gap: 100px;
+  gap: 10px;
 }
 
 @media screen and (min-width: 576px) {
+  .triangle {
+    top: -70px;
+    width: 70%;
+    min-width: 470px;
+  }
+  .triangle p {
+    top: 20%;
+    left: 40%;
+    width: 42%;
+  }
+  .white-block {
+    padding: 120px 0;
+  }
+  .white-block::before {
+    height: 50px;
+  }
+  .intro__content {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .triangle {
+    top: -90px;
+  }
+  .triangle p {
+    top: 20%;
+    left: 35%;
+    width: 50%;
+  }
   .white-block {
     padding: 150px 0;
+  }
+  .intro__content {
+    gap: 100px;
+  }
+  .image-block {
+    height: 600px;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  .triangle {
+    top: -30%;
+    width: 50%;
+    max-width: 650px;
+  }
   .white-block {
     padding: 180px 0;
+  }
+  .image-block {
+    height: 700px;
+  }
+}
+
+/* profile photo */
+
+.circular-img-wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.circular-img {
+  background-image: url("../images/Lucy_headshot.jpg");
+  height: 120px;
+  width: 120px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 100%;
+  border-radius: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  .circular-img-wrapper {
+    justify-content: center;
+  }
+
+  .circular-img {
+    height: 140px;
+    width: 140px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .circular-img {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .circular-img {
+    height: 200px;
+    width: 200px;
   }
 }
 
@@ -335,7 +453,7 @@ ul {
   background-color: var(--soft-paper);
 }
 
-.career-content {
+.career__content {
   display: flex;
   gap: 60px;
 }
@@ -422,13 +540,14 @@ ul {
   background-color: var(--darker-blue);
   color: var(--white);
   position: relative;
+  padding: 80px 0;
 }
 
 .about img {
   position: absolute;
-  top: -150px;
+  width: 30%;
+  top: 20px;
   right: 40px;
-  /* transform: translateY(-65%); */
 }
 
 .about__content {
@@ -445,44 +564,29 @@ ul {
   text-decoration: underline;
 }
 
-/* profile photo */
-
-.circular-img-wrapper {
-  display: none;
-}
-
 @media screen and (min-width: 576px) {
-  .circular-img-wrapper {
-    display: flex;
-    justify-content: center;
+  .about {
+    padding: 100px 0;
   }
-
-  .circular-img {
-    background-image: url("../images/Lucy_headshot.jpg");
-    height: 140px;
-    width: 140px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 70% 100%;
-    border-radius: 100%;
-    margin-top: 20px;
+  .about img {
+    width: 50%;
+    top: -120px;
   }
 }
-
 @media screen and (min-width: 768px) {
-  .circular-img {
-    height: 180px;
-    width: 180px;
+  .about {
+    padding: 150px 0;
+  }
+  .about img {
+    width: auto;
+    top: -150px;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  .circular-img {
-    height: 200px;
-    width: 200px;
+  .about {
+    padding: 200px 0;
   }
 }
-
 /* ======================== */
 /* CONTACT */
 /* ======================== */
@@ -493,7 +597,7 @@ ul {
 }
 
 .contact.section {
-  padding-bottom: 80px;
+  padding: 80px 0;
 }
 
 .contact .section-heading .final-word::after {
@@ -525,6 +629,9 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
+  .contact.section {
+    padding: 120px 0;
+  }
   .contact a {
     font-size: 30px;
   }
