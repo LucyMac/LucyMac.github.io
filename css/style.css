@@ -596,32 +596,11 @@ ul {
     width: auto;
     top: -150px;
   }
-  .circular-img {
-    height: 140px;
-    width: 140px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .about {
     padding: 200px 0;
   }
-  .circular-img-wrapper {
-    display: flex;
-    justify-content: center;
-  }
-
-  .circular-img {
-    background-image: url("../images/Lucy_headshot.jpg");
-    height: 100px;
-    width: 100px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 70% 100%;
-    border-radius: 100%;
-    margin-top: 20px;
-  }
-}
-@media screen and (min-width: 768px) {
 }
 /* ======================== */
 /* CONTACT */
