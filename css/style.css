@@ -342,10 +342,12 @@ ul {
 
 @media screen and (min-width: 400px) {
   .triangle p {
-    left: 40%;
+    left: 37%;
     width: 45%;
+    font-size: 15px;
   }
 }
+
 @media screen and (min-width: 576px) {
   .triangle {
     top: -70px;
@@ -356,7 +358,7 @@ ul {
     top: 20%;
     left: 40%;
     width: 42%;
-    font-size: 15px;
+    font-size: 17px;
   }
   .white-block {
     padding: 120px 0;
@@ -379,7 +381,7 @@ ul {
     top: 20%;
     left: 35%;
     width: 45%;
-    font-size: 17px;
+    font-size: 20px;
   }
   .white-block {
     padding: 150px 0;
